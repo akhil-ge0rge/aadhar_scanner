@@ -108,7 +108,7 @@ class _HomeScreenState extends State<HomeScreen> {
     required String dob,
     required String id,
   }) async {
-    String query = "?name=$name&sex=$gender&dob=$dob&id=xxxyyzz";
+    String query = "?name=$name&sex=$gender&dob=$dob&id=$id";
     var finalURI = Uri.parse(baseURL + query);
     var response = await http.get(finalURI);
     log(response.statusCode.toString());
